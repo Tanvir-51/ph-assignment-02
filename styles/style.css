@@ -8,16 +8,18 @@
     common styles or utilities 
 --------------------------------*/
 body {
-  width: 100%;
   margin: 0;
+  padding: 0;
   font-family: "Poppins", sans-serif;
-  background-color: #fff;
+}
+
+img {
+  width: 100%;
 }
 
 main {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: center;
 }
 
 /* ------------------
@@ -26,18 +28,19 @@ main {
 header {
   background-color: rgb(0, 0, 148);
   margin-bottom: 70px;
+  padding: 80px 0;
+  display: flex;
+  justify-content: center;
 }
 
 .header-part {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .header-left {
-  width: 50%;
   color: #fff;
-  padding-left: 156px;
   line-height: 80px;
 }
 
@@ -52,18 +55,24 @@ header {
   color: white;
   padding: 10px 24px;
   border-radius: 5px;
+  transition: padding 0.5s;
+}
+
+.button-click:hover {
+  /* background-color: red; */
+  padding: 15px 30px;
 }
 
 .fa-arrow-right {
-  margin-left: 5px;
+  padding-left: 5px;
 }
 
-.header-right {
-  margin: 70px 80px 65px 170px;
-  width: 50%;
+.header-part img {
+  transition: transform 0.5s;
 }
-.header-right img {
-  width: 100%;
+.header-part img:hover {
+  /* width: 105%; */
+  transform: scale(1.1) rotate(15deg);
 }
 
 /*----------------
@@ -90,12 +99,18 @@ header {
   text-align: center;
 }
 
+/* --------------------------
+     Extra-part  style start
+------------------------------ */
+
 /* -----------------
     Gallery style
 -------------------- */
 
 .gallery {
-  margin: 150px 0;
+  padding: 100px 0;
+  margin: auto;
+  text-align: center;
 }
 .gallery-title {
   margin-left: 25px;
@@ -118,6 +133,35 @@ header {
 }
 
 /*------------------
+     video style 
+---------------------*/
+.videos {
+  margin: auto;
+  text-align: center;
+}
+
+.video-title {
+  color: rgb(6, 6, 73);
+  margin-bottom: 50px;
+  font-size: 30px;
+}
+
+.video-links {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 50px 200px;
+  width: 60%;
+  margin-bottom: 100px;
+}
+
+.match-video {
+  margin: 10px;
+  padding: 10px;
+  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+}
+
+/*------------------
      Sponsor style 
 ---------------------*/
 
@@ -136,29 +180,33 @@ header {
   justify-content: center;
 }
 .sponsor-list img {
-  width: 20%;
+  width: 150px;
+  padding: 10px;
 }
 .sponsor-list a {
   text-decoration: none;
 }
+
+hr {
+  border: 1px solid #d1d1d1;
+  margin-top: 50px;
+}
+
+/* --------------------------
+        Extra-part  style end
+------------------------------ */
 
 /*------------------
      Footer style 
 ---------------------*/
 
 .footer {
-  margin: 180px 0 70px;
+  /* margin: 100px 0 70px; */
+  padding: 50px 0;
   text-align: center;
-  /* align-items: center; */
-  /* display: flex;
-  align-items: center;
-  flex-direction: column; */
 }
-.footer-image {
-  /* height: 100px;
-  width: 450px; */
-  max-width: 100%;
-  /* margin-left: auto; */
+.footer-image img {
+  width: 450px;
 }
 
 .social-copyright a {
@@ -169,4 +217,77 @@ header {
 
 .copyright {
   font-size: 18px;
+}
+
+/*------------------------------- 
+    media query for mobile screen
+----------------------- ----------*/
+
+@media only screen and (max-width: 688px) {
+  .header-part {
+    width: 80%;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .header-title {
+    margin: 0;
+    font-size: 36px;
+    line-height: 50px;
+  }
+
+  .header-part img {
+    width: 400px;
+    margin-top: 70px;
+  }
+  .players {
+    grid-template-columns: repeat(1, 1fr);
+    width: 100%;
+  }
+  .gallery-image img {
+    max-width: 30%;
+    margin-right: 0;
+  }
+
+  .video-links {
+    grid-template-columns: repeat(1, 1fr);
+    /* width: 100%; */
+    margin-left: 90px;
+  }
+
+  .sponsor-list {
+    width: 100%;
+  }
+  .footer-image img {
+    width: 300px;
+  }
+}
+
+/* -------------------------------- 
+    media query for tablet devices
+------------------------------------ */
+@media only screen and (min-width: 688px) and (max-width: 992px) {
+  .header-title {
+    font-size: 26px;
+    line-height: 50px;
+  }
+  .header-part img {
+    width: 300px;
+    margin-top: 30px;
+  }
+  .container {
+    width: 100%;
+  }
+  .players {
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 10px;
+  }
+  .gallery-image img {
+    max-width: 30%;
+    margin-left: 15px;
+  }
+  .video-links {
+    grid-template-columns: repeat(1, 1fr);
+    margin-left: 120px;
+    /* width: 10%; */
+    /* align-items: center; */
+  }
 }
