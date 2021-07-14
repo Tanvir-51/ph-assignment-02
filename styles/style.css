@@ -8,6 +8,7 @@
     common styles or utilities 
 --------------------------------*/
 body {
+  width: 100%;
   margin: 0;
   font-family: "Poppins", sans-serif;
   background-color: #fff;
@@ -31,11 +32,10 @@ header {
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 0px;
 }
 
 .header-left {
-  width: 100%;
+  width: 50%;
   color: #fff;
   padding-left: 156px;
   line-height: 80px;
@@ -59,10 +59,8 @@ header {
 }
 
 .header-right {
-  margin-left: 170px;
-  margin-right: 120px;
-  margin-top: 70px;
-  margin-bottom: 65px;
+  margin: 70px 80px 65px 170px;
+  width: 50%;
 }
 .header-right img {
   width: 100%;
@@ -88,15 +86,70 @@ header {
 .player img {
   width: 100%;
 }
+.player-name {
+  text-align: center;
+}
+
+/* -----------------
+    Gallery style
+-------------------- */
+
+.gallery {
+  margin: 150px 0;
+}
+.gallery-title {
+  margin-left: 25px;
+  color: rgb(6, 6, 73);
+  margin-bottom: 50px;
+  font-size: 30px;
+}
+.gallery-images {
+  margin-left: 5px;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.gallery-image img {
+  max-width: 33%;
+}
+.gallery-image a {
+  text-decoration: none;
+}
+
+/*------------------
+     Sponsor style 
+---------------------*/
+
+.sponsor {
+  margin: auto;
+  text-align: center;
+}
+.sponsor-title {
+  color: rgb(6, 6, 73);
+  margin-bottom: 50px;
+  font-size: 30px;
+}
+.sponsor-lists {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sponsor-list img {
+  width: 20%;
+}
+.sponsor-list a {
+  text-decoration: none;
+}
 
 /*------------------
      Footer style 
 ---------------------*/
 
 .footer {
-  margin: 180px 0 100px;
+  margin: 180px 0 70px;
   text-align: center;
-  align-items: center;
+  /* align-items: center; */
   /* display: flex;
   align-items: center;
   flex-direction: column; */
@@ -104,8 +157,8 @@ header {
 .footer-image {
   /* height: 100px;
   width: 450px; */
-  width: 70%;
-  margin-left: 200px;
+  max-width: 100%;
+  /* margin-left: auto; */
 }
 
 .social-copyright a {
