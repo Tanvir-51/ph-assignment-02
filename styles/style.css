@@ -1,0 +1,119 @@
+/*----------
+     Fonts
+------------ */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+
+/*------------------------------- 
+    common styles or utilities 
+--------------------------------*/
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #fff;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ------------------
+    Header Style
+--------------------- */
+header {
+  background-color: rgb(0, 0, 148);
+  margin-bottom: 70px;
+}
+
+.header-part {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+}
+
+.header-left {
+  width: 100%;
+  color: #fff;
+  padding-left: 156px;
+  line-height: 80px;
+}
+
+.header-title {
+  margin: 0;
+  font-size: 54px;
+}
+
+.button-click {
+  background: #e02c6d;
+  text-decoration: none;
+  color: white;
+  padding: 10px 24px;
+  border-radius: 5px;
+}
+
+.fa-arrow-right {
+  margin-left: 5px;
+}
+
+.header-right {
+  margin-left: 170px;
+  margin-right: 120px;
+  margin-top: 70px;
+  margin-bottom: 65px;
+}
+.header-right img {
+  width: 100%;
+}
+
+/*----------------
+     Player style 
+------------------- */
+
+.players {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 30px;
+  grid-row-gap: 25px;
+}
+
+.player {
+  width: 330px;
+  padding: 10px;
+  /* background-color: tomato; */
+  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
+}
+.player img {
+  width: 100%;
+}
+
+/*------------------
+     Footer style 
+---------------------*/
+
+.footer {
+  margin: 180px 0 100px;
+  text-align: center;
+  align-items: center;
+  /* display: flex;
+  align-items: center;
+  flex-direction: column; */
+}
+.footer-image {
+  /* height: 100px;
+  width: 450px; */
+  width: 70%;
+  margin-left: 200px;
+}
+
+.social-copyright a {
+  color: gray;
+  margin-right: 15px;
+  font-size: 25px;
+}
+
+.copyright {
+  font-size: 18px;
+}
