@@ -59,7 +59,6 @@ header {
 }
 
 .button-click:hover {
-  /* background-color: red; */
   padding: 15px 30px;
 }
 
@@ -68,10 +67,9 @@ header {
 }
 
 .header-part img {
-  transition: transform 0.5s;
+  transition: transform 1s ease-in;
 }
 .header-part img:hover {
-  /* width: 105%; */
   transform: scale(1.1) rotate(15deg);
 }
 
@@ -89,7 +87,6 @@ header {
 .player {
   width: 330px;
   padding: 10px;
-  /* background-color: tomato; */
   box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
 }
 .player img {
@@ -249,7 +246,6 @@ hr {
 
   .video-links {
     grid-template-columns: repeat(1, 1fr);
-    /* width: 100%; */
     margin-left: 90px;
   }
 
@@ -287,7 +283,5 @@ hr {
   .video-links {
     grid-template-columns: repeat(1, 1fr);
     margin-left: 120px;
-    /* width: 10%; */
-    /* align-items: center; */
   }
 }
